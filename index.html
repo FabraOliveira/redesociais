@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fabra Oliveira — Links & Portfólio</title>
+  <link rel="icon" type="image/png" href="./img/favicon.png">
+  <meta name="description" content="Links, redes sociais e portfólio de projetos em HTML/CSS de Fabra Oliveira." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: #0f172a;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --brand: #38bdf8;
+      --ring: rgba(56,189,248,.35);
+      --shadow: 0 10px 30px rgba(2,8,23,.55);
+      --line: rgba(226,232,240,.14);
+      --soft: rgba(255,255,255,.02);
+    }
+    .light{
+      --bg:#f7fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --brand:#0284c7; --ring:rgba(2,132,199,.28); --shadow:0 12px 30px rgba(2,8,23,.08);
+      --line: rgba(15,23,42,.14);
+      --soft: rgba(2,8,23,.04);
+    }
+    *{box-sizing:border-box}
+    html,body{
+      height:100%;
+      display:flex;
+      flex-direction:column;
+    }
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text); background:var(--bg);
+      align-items:center; justify-content:flex-start; padding:32px; transition:background .4s ease, color .4s ease;
+      overflow-x:hidden;
+    }
+    .container{width:100%; max-width:1040px; flex:1;}
+
+    header{
+      display:grid;
+      grid-template-columns:max-content 1fr max-content;
+      column-gap:24px;
+      align-items:center;
+      background:var(--card);
+      padding:20px 24px;
+      border-radius:20px;
+      box-shadow:var(--shadow);
+      border:1px solid var(--line);
+    }
+
+    .avatar{
+      width:120px; height:120px; min-width:120px;
+      border-radius:50%; overflow:hidden; border:2px solid var(--brand);
+    }
+    .avatar img{
+      width:100%; height:100%; object-fit:cover; display:block; image-rendering:auto;
+    }
+
+    .title{display:flex; flex-direction:column; gap:8px;}
+    .title h1{font-size:1.7rem; margin:0; line-height:1.2;}
+    .title p{margin:0; color:var(--muted);}
+
+    .actions{display:flex; align-items:center; justify-self:end;}
+    .btn{appearance:none; border:none; cursor:pointer; background:transparent; color:var(--text); font-weight:600;
+      border:1px solid var(--line); border-radius:14px; padding:8px 14px; display:inline-flex; align-items:center; gap:8px; transition:background .3s, color .3s, border .3s;}
+    .btn:hover{background:rgba(56,189,248,.15);}
+    .btn .btn-icon{width:18px;height:18px;}
+
+    main{margin-top:24px; display:grid; gap:24px;}
+    .card{background:var(--card); border-radius:18px; padding:18px; box-shadow:var(--shadow); border:1px solid var(--line);}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:16px;}
+    .links .item{display:flex; align-items:center; gap:12px; padding:14px 16px; border-radius:14px; text-decoration:none; color:var(--text);
+      background:var(--soft); border:1px solid var(--line); transition:transform .15s, box-shadow .15s;}
+    .links .item:hover{transform:translateY(-2px); box-shadow:0 8px 20px rgba(2,8,23,.3);}
+    .icon img{width:24px; height:24px; display:block;}
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:.9rem;
+      margin-top:32px;
+      padding:24px 0 32px;
+      border-top:1px solid var(--line);
+    }
+
+    /* Animação do ícone de tema */
+    @keyframes spinIn {from {transform:rotate(-90deg);opacity:.2;} to {transform:rotate(0);opacity:1;}}
+    .btn-theme-anim{animation:spinIn .35s ease}
+
+    /* Mobile padrão (≤ 680px) — mantém avatar 110x110 */
+    @media (max-width: 680px){
+      header{grid-template-columns:1fr; row-gap:12px; text-align:center;}
+      .avatar{width:110px; height:110px; margin:0 auto;}
+      .title{align-items:center;}
+      .actions{justify-self:center;}
+      .grid{grid-template-columns:1fr;}
+    }
+
+    /* MUITO pequeno: somente < 374px — sem alterar o avatar */
+    @media (max-width: 374px){
+      body{padding:16px;}
+      header{padding:16px; border-radius:16px; column-gap:12px;}
+      .title h1{font-size:clamp(1.25rem, 6vw, 1.5rem);}
+      .title p{font-size:clamp(.9rem, 3.8vw, 1rem);}
+      .btn{padding:6px 10px; border-radius:12px; gap:6px;}
+      .links .item{padding:12px 14px;}
+      .grid{grid-template-columns:repeat(auto-fit, minmax(200px,1fr));}
+      .card{padding:14px; border-radius:16px;}
+      .avatar{width:110px; height:110px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <figure class="avatar">
+        <img 
+          src="./img/Linkedin.jpeg"
+          srcset="./img/Linkedin.jpeg 1x, ./img/Linkedin@2x.jpeg 2x, ./img/Linkedin@3x.jpeg 3x"
+          sizes="(max-width: 680px) 110px, 120px"
+          width="120" height="120"
+          alt="Foto de perfil de Fabra Oliveira"
+          loading="eager" decoding="async">
+      </figure>
+      <div class="title">
+        <h1>Fabra Oliveira</h1>
+        <p>Engenharia de Software & Redes • Araçatuba, SP</p>
+      </div>
+      <div class="actions">
+        <button class="btn ghost" id="toggleTheme" aria-label="Alternar tema">
+          <span class="btn-icon" id="themeIcon" aria-hidden="true"></span>
+          <span id="themeLabel">Claro</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2 style="margin-top:0">Minhas Redes</h2>
+        <div class="grid links">
+          <a class="item" href="https://fabraoliveira.github.io/portfolio/" target="_blank">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="#38bdf8" width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <path d="M4 4a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4z"/>
+              </svg>
+            </span>
+            <span><strong>Portfólio</strong> / Projetos e estudos</span>
+          </a>
+          <a class="item" href="https://github.com/FabraOliveira" target="_blank" rel="noopener"><span class="icon"><img src="https://fabraoliveira.github.io/portfolio/img/github.png" alt="GitHub"></span><span><strong>GitHub</strong> / Repositórios</span></a>
+          <a class="item" href="https://www.linkedin.com/in/fabricio-de-oliveira-bimbi-516719223" target="_blank" rel="noopener"><span class="icon"><img src="https://fabraoliveira.github.io/portfolio/img/linkedin.png" alt="LinkedIn"></span><span><strong>LinkedIn</strong> / Experiência e contatos</span></a>
+          <a class="item" href="https://www.instagram.com/fabra.oliveira" target="_blank" rel="noopener"><span class="icon"><img src="https://fabraoliveira.github.io/portfolio/img/instagram.png" alt="Instagram"></span><span><strong>Instagram</strong> / Cotidiano</span></a>
+          <a class="item" id="tiktokLink" href="https://www.tiktok.com/@fabra.oliveira" target="_blank" rel="noopener"><span class="icon"><img id="tiktokIcon" src="https://fabraoliveira.github.io/portfolio/img/tik-tok.png" alt="TikTok"></span><span><strong>TikTok</strong> / Dicas e curiosidades</span></a>
+          <a class="item" href="https://youtube.com/@fabraoliveira" target="_blank" rel="noopener"><span class="icon"><img src="https://fabraoliveira.github.io/portfolio/img/youtube.png" alt="YouTube"></span><span><strong>YouTube</strong> / Tutoriais e vídeos</span></a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Sobre</h2>
+        <p style="margin:0; color:var(--muted)">
+          Olá, meu nome é Fabricio de Oliveira, sou formado em Análise e Desenvolvimento de Sistemas e concluindo Engenharia de Software. 
+          Atuo como Técnico em Informática e venho me especializando na área de Redes e Infraestrutura. 
+          Tenho paixão por tecnologia, desenvolvimento e pelo constante aprendizado que o mundo da TI proporciona. 
+          <br><br>
+          Aqui você encontra meus projetos, redes sociais e formas de contato.
+        </p>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Fabra Oliveira • Feito com HTML + CSS puro • 
+        Hospedado no <a href="https://pages.github.com/" target="_blank" rel="noopener" style="color:var(--brand); text-decoration:underline">GitHub Pages</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toggle = document.getElementById('toggleTheme');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+    const tiktokIcon = document.getElementById('tiktokIcon');
+    const THEME_KEY = 'fabra-theme';
+
+    function setIcon(showSun){
+      themeIcon.classList.remove('btn-theme-anim');
+      themeIcon.innerHTML = showSun
+        ? '<svg viewBox="0 0 24 24" fill="white" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4 12H2m20 0h-2M5.64 5.64 4.22 4.22M19.78 19.78l-1.42-1.42M19.78 4.22l-1.42 1.42M4.22 19.78l1.42-1.42" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg>'
+        : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg>';
+      void themeIcon.offsetWidth;
+      themeIcon.classList.add('btn-theme-anim');
+    }
+
+    function setTikTokTheme(isLight){
+      if(!tiktokIcon) return;
+      tiktokIcon.src = isLight 
+        ? 'https://fabraoliveira.github.io/portfolio/img/tik-tok--escuro.png' 
+        : 'https://fabraoliveira.github.io/portfolio/img/tik-tok.png';
+    }
+
+    const saved = localStorage.getItem(THEME_KEY);
+    const isLightAtStart = saved === 'light';
+    if (isLightAtStart) {
+      document.body.classList.add('light');
+      themeLabel.textContent = 'Escuro';
+      setIcon(false);
+      setTikTokTheme(true);
+    } else {
+      themeLabel.textContent = 'Claro';
+      setIcon(true);
+      setTikTokTheme(false);
+    }
+
+    toggle.addEventListener('click', () => {
+      const isLightNow = document.body.classList.toggle('light');
+      themeLabel.textContent = isLightNow ? 'Escuro' : 'Claro';
+      localStorage.setItem(THEME_KEY, isLightNow ? 'light' : 'dark');
+      setIcon(!isLightNow);
+      setTikTokTheme(isLightNow);
+    });
+  </script>
+</body>
+</html>
