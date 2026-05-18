@@ -24,8 +24,8 @@ function setSocialIconsTheme(isLight){
   }
   if(githubIcon) {
     githubIcon.src = isLight
-      ? './img/github-Escuro.png'
-      : './img/github-claro.png';
+      ? './img/github-claro.png'
+      : './img/github-Escuro.png';
   }
 }
 
