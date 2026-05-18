@@ -6,8 +6,9 @@
 ---
 
 ## 👤 Sobre
-Sou **Fabricio de Oliveira**, formado em **Análise e Desenvolvimento de Sistemas** e concluindo **Engenharia de Software**.  
+Sou **Fabricio de Oliveira**, formado em **Análise e Desenvolvimento de Sistemas** e **Bacharel em Engenharia de Software**.  
 Atualmente trabalho como **Técnico em Informática**, com foco em **Redes e Infraestrutura**.  
+No momento, curso **Redes de Computadores** e realizo uma **pós-graduação em Desenvolvimento Full Stack**.  
 Apaixonado por tecnologia e pelo aprendizado constante que a área de TI proporciona. 🚀
 
 ---
@@ -15,6 +16,7 @@ Apaixonado por tecnologia e pelo aprendizado constante que a área de TI proporc
 ## 🧰 Tecnologias
 - 🖋️ **HTML5**
 - 🎨 **CSS3**
+- ⚡ **JavaScript **
 - ☁️ **GitHub Pages**
 
 ---
